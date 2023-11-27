@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeIT</title>
+    <link rel="stylesheet" href="assg.css">
+</head>
+<body>
+    <nav id = 'nav1'>
+        <ul>
+            <li>
+                <img src="profile.png" alt="profile">
+                <a href="#">Profile</a>
+            </li>
+            <li>
+                <img src="star.png" alt="rewards">
+                <a href="#">Rewards</a>
+            </li>
+            <li>
+                <img src="logout.png" alt="logout">
+                <a href="#">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <nav id = 'nav2'>
+        <div id = 'heading'>ARCADE</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li>
+                <div id = 'dropdown' onmouseenter="drop_enter()" onmouseleave="drop_leave()">
+                    <a href="#">Games
+                        <img src = 'down.png' id = 'down-arrow'></img>
+                    </a>
+                    <section id = 'dropdown-list'>
+                        <div>Foot-ball</div>
+                        <div>Basket-ball</div>
+                        <div>Throw-ball</div>
+                    </section>
+                </div>
+            </li>
+            <li><a href="#">Maps</a></li>
+            <li>
+                <input type="search" name="search" id="search" placeholder="search..">
+                <label for="search"><img src="search.png" alt=""></label>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section id = 'grid'>
+        <aside id = 'games'>
+            <div class = 'items'>
+                <ul>
+                    <li class = 'selected'>Similar Games</li>
+                    <li>Doodle</li>
+                    <li>MemCheck</li>
+                    <li>Riddy</li>
+                </ul>
+            </div>
+            <div class = 'items'>
+                <ul>
+                    <li class = 'selected'>Top Ranked</li>
+                    <li>Sonic</li>
+                    <li>Super Mario Bros</li>
+                    <li>MemCheck</li>
+                </ul>
+            </div>
+        </aside>
+        <div id = 'meme'>
+            <div id = 'meme_nav'>Home / Games / Online / Meme It</div>
+            <div id = 'meme_cont'>
+                <section id = 'meme_it'>
+                    <div id = 'meme_heading'>Meme It</div>
+                    <div class = 'memes'>
+                        <img src="meme1.jpeg" alt="">
+                        <p id = 'txt1' class = 'txt'></p>
+                    </div>
+                    <div class = 'memes'>
+                        <img src="meme2.jpeg" alt="">
+                        <p id = 'txt2' class = 'txt'></p>
+                    </div>
+                </section>
+                <section id = 'play'>
+                    <h2>How to play</h2>
+                    <hr>
+                    <p>Enter the text into the input fields and generate your custom meme!</p>
+                    <form onsubmit="return generate()">   
+                        <input type="text" class='data' autocomplete="on" required>
+                        <input type="text" class = 'data' autocomplete="on" required>
+                        <input type="submit" value="Generate" class = 'btn'>
+                        <input type="reset" class = 'btn' onclick="reset_fun()">
+                    </form>
+                </section>
+            </div>
+            </div>
+        </section>
+
+
+        <section id = 'page2'>
+            <div id = 'content'>
+                <p class = 'gallery'>Gallery</p>
+                <section id = 'gallery_imgs'>
+                    <div style="display: block;"><img src="img1.jpeg" alt="Bowling"></div>
+                    <div style="display: none;"><img src="img2.jpeg" alt="Mini Games"></div>
+                    <div style="display: none;"><img src="img3.jpeg" alt="Arrow Shooting"></div>
+                    <div style="display: none;"><img src="img4.jpeg" alt="Car racing"></div>
+                    <p class = 'arrow' id = 'left'  onclick="arrow(this.id)"> < </p>
+                    <p class = 'arrow' id = 'right' onclick="arrow(this.id)"> > </p>
+                </section>
+            </div>
+            <div id = 'explore'>
+                <p id="heading_explore">Explore more offline</p>
+                <p>Here's a glimpse!</p>
+                <p>More..</p>
+            </div>
+            <section id = 'contact'>
+                <ul id = 'contactUs'>
+                    <p class = 'gallery'>Contact us</p>
+                    <form action="#" onsubmit="return ()=>{return false};">
+                        <li>
+                            <label for="name" style="font-size: 15px;">Name</label>
+                            <input type="text" name="name" style="padding-left: 60px;"  required>
+                        </li>
+                        <li>
+                            <label for="msg"><img src="mail.jpg" alt="mail"></label>
+                        <input type="text" name="msg" required>
+                    </li>
+                    <li>
+                        <label for="phno"><img src="phone.jpg" alt="phone"></label>
+                        <input type="text" name="phno" required>
+                    </li>
+                    <li>
+                        <textarea name="msgs" id="textarea" cols="30" rows="4" style="padding: 10px; outline:none;" placeholder=" ..."></textarea>
+                    </li>
+                    <li>
+                        <input type="submit" id = 'sub' name="Submit">
+                    </li>
+                </form>
+                </ul>
+                <br>
+                <div>
+                    <p class = 'gallery'>Follow us</p>
+                    <li>
+                        <img src="insta.jpg" alt="">
+                        <p>ArcadeArena</p>
+                    </li>
+                    <li>
+                        <img src="youtube.png" alt="">
+                        <p>ArcadeArena</p>
+                    </li>
+                </div>
+            </section>
+        </section>
+        <script src="assg.js"></script>
+</body>
+</html>

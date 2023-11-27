@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Game Details</h1>
+    <div id = 'dis'></div>
+    <button id = 'editgame'>Edit game</button>
+    <button id = 'deletegame'>Delete game</button>
+    <br><br>
+    <a href="Main.html">Back to List</a>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        const t = urlParams.get('title');
+        var store = JSON.parse(localStorage.getItem('store'));
+        var count = 0;
+        for(let i=0;i<store.length;i++)
+        {
+            if(store[i].title == t){
+                let paths = document.createElement('img');
+                paths.src = store[i].path;
+                paths.alt = store[i].alt;
+                paths.style.width = '400px';
+                paths.style.height = '400px';
+                let titled = document.createElement('p');
+                let description = document.createElement('p');
+                let typed = document.createElement('p');
+                let aged = document.createElement('p');
+                let pricings_hr = document.createElement('p');
+                let pricings = document.createElement('p');
+                titled.innerHTML = `Name : ${store[i].title}`;
+                description.innerHTML = `Description : ${store[i].des}`;
+                typed.innerHTML = `Type : ${store[i].type}`;
+                aged.innerHTML = `Age : ${store[i].age}`;
+                pricings_hr.innerHTML = `Pricing(Hourly) : $${store[i].pricing_hr}`;
+                pricings.innerHTML = `Pricing(Per Game): $${store[i].pricing}`;
+                let dis = document.getElementById('dis');
+                dis.appendChild(paths);
+                dis.appendChild(titled);
+                dis.appendChild(description);
+                dis.appendChild(typed);
+                dis.appendChild(aged);
+                dis.appendChild(pricings_hr);
+                dis.appendChild(pricings);
+                document.getElementById('editgame').addEventListener('click',()=>{
+                    window.location.href = `EditGame.html?title=${store[i].title}`;
+                })
+                document.getElementById('deletegame').addEventListener('click',()=>{
+                    let con = confirm("This will be Permanently Deleted!! Are u Sure..??");
+                    if(con){
+                        store.splice(i, 1);
+                        // Store the updated array back in localStorage
+                        localStorage.setItem('store', JSON.stringify(store));
+                        window.location.href = 'Main.html';
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+</html>

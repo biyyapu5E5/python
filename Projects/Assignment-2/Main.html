@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#">Home</a>
+    <h1>Arcade</h1>
+    <p>This is the list of available games</p>
+    <button id = 'newGame'>Add new game</button>
+    <form action="#">
+        <input type="text" placeholder="name" id = 'named'>
+        <select name="filter" id="filter">
+            <option value="No filter">No filter</option>
+            <option value="Virtual Reality">Virtual Reality</option>
+        </select>
+        <button class = 'search' id="searching">search</button>
+    </form>
+    <div id = 'games'></div>
+    <script>
+        var games = document.getElementById('games');
+        var store = JSON.parse(localStorage.getItem('store')) || [];
+        var searching = document.getElementById('searching');
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            displayUserData();
+
+            document.getElementById('newGame').addEventListener('click', function () {
+                window.location.href = 'AddGame.html';
+            });
+
+            searching.addEventListener('click',(event)=>{
+                event.preventDefault();
+                // console.log(filter);
+                var named = document.getElementById('named').value.toLowerCase();
+                var filter = document.getElementById('filter').value.toLowerCase();
+
+                while (games.firstChild) {
+                    games.removeChild(games.firstChild);
+                }
+                for(let i=0;i<store.length;i++)
+                {
+                    var ele = store[i].title.toLowerCase();
+                    if(filter.includes('virtual reality')){
+                        if(named==' ' && (ele.includes('vr') || ele.includes('virtual reality'))){
+                            calling(store[i]);
+                        }
+                        else if(ele.includes(filter+' '+named) || ele.includes(named+' '+filter)){
+                            calling(store[i]);
+                        }
+                        else if(ele.includes('vr'+' '+named) || ele.includes(named+' '+'vr')){
+                            calling(store[i]);
+                        }
+                    }
+                    else{
+                        if(ele.includes(named)){
+                            calling(store[i]);
+                        }
+                    }
+                }
+            })
+        });
+        function displayUserData(params) {
+            store.forEach((data)=>{
+                calling(data);
+            })
+        }
+        function calling(data) {
+            var figure = document.createElement('figure');
+            var img = document.createElement('img');
+            var figcaption = document.createElement('figcaption');
+    
+            figure.style.display = 'flex';
+            figure.style.flexDirection = 'column';
+            figure.style.border = '1px solid black';
+            figure.style.cursor = 'pointer';
+            figure.style.width = '200px';
+            figure.addEventListener('click',()=>{
+                window.location.href = `DisplayGame.html?title=${data.title}`
+            })
+            
+            img.src = data.path;
+            img.alt = data.alt;
+            img.style.height = '200px';
+            img.style.width = '200px';
+    
+            figcaption.textContent = data.title;
+            figcaption.style.textAlign = 'center';
+    
+            figure.appendChild(img);
+            figure.appendChild(figcaption);
+            games.appendChild(figure);
+        }
+    </script>
+</body>
+</html>

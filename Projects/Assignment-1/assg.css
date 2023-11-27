@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+:root{
+    --main : rgba(19, 125, 125, 0.884);
+    --gray : rgb(171, 170, 170);
+    --font :Arial, Helvetica, sans-serif;
+}
+/* nav 1 */
+#nav1{
+    background-color: black;
+    height: 40px;
+}
+#nav1 ul{
+    float: right;
+}
+#nav1 ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+#nav1 ul li img{
+    width: 15px;
+    height: 15px;
+    float: left;
+    border-radius: 50%;
+    padding-right: 5px;
+    /* opacity: 0.5; */
+}
+/* nav 2 */
+#nav2{
+    position: relative;
+    background-color: var(--main);
+    height: 70px;
+    font-family: var(--font);
+}
+#nav2 ul li{
+    list-style-type: none;
+    float: left;
+    padding: 22px;
+    /* border: 2px solid red; */
+}
+#nav2 ul li a{
+    font-size: 15px;
+}
+#nav2 ul li input{
+    padding: 3px 20px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: none;
+}
+#nav2 ul li input::placeholder{
+    font-size: 12px;
+    font-style: italic;
+}
+
+input[type=search]{
+    position: relative;
+    outline: none;
+}
+input[type=search]+label{
+    position: absolute;
+    top: 26px;
+    left: 740px;
+    z-index: 1;
+}
+input[type=search]+ label img{
+    width: 15px;
+    height: 15px;
+    background-position: center;
+}
+#dropdown{
+    position: relative;
+}
+#dropdown-list{
+    position: absolute;
+    width: 100px;
+    display: none;
+    background-color: aliceblue;
+}
+#dropdown-list div{
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color:rgb(207, 204, 204);
+    font-size: 12px;
+    padding: 5px;
+}
+#down-arrow{
+    height: 10px;
+    width: 15px;
+    /* opacity: 0.5; */
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+}
+#heading{
+    font-size: 25px;
+    float: left;
+    color: white;
+    padding: 20px;
+    margin-left: 30px;
+}
+#dropdown-list div:hover{
+    background-color: bisque;
+    cursor: pointer;
+}
+#grid{
+    display: flex;
+    height: 83vh;
+    /* border : 1px solid red; */
+    font-family: var(--font);
+}
+#games{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 13vw;
+    /* border : 1px solid blue; */
+
+}
+.items{
+    border: 1px solid var(--gray);
+    border-radius: 3px;
+}
+.items li{
+    font-size: 15px;
+    padding: 10px;
+    width: 8vw;
+}
+.items li:nth-child(3){
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+}
+.selected{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top: 1px solid var(--main);
+    color: #fff;
+    background-color: var(--main);
+}
+.items li:not(.selected):hover{
+    background-color: #f1f1f1;
+}
+#meme{
+    width: 92vw;
+    /* border: 1px solid green; */
+}
+#meme_nav{
+    width: 84vw;
+    border-radius: 2px;
+    margin: 10px 5px 10px 10px;
+    background-color: #f1f1f1;
+    padding: 10px 12px;
+}
+#meme_cont{
+    display: flex;
+}
+#meme_it{
+    width: 50vw;
+    height: 70vh;
+    margin: 10px;
+    border: 2px solid #ddd;
+}
+#play{
+    /* text-align: center; */
+    margin-top: 10px;
+    box-sizing: border-box;
+    width: 55vh;
+    height: 60vh;
+    padding: 60px;
+    background-color: rgba(211, 211, 211, 0.58);
+    border-radius: 5px;
+}
+#play hr{
+    margin: 20px 0px;
+}
+#play p{
+    font-size: 14px;
+}
+.data{
+    outline: none;
+    font-size: 18px;
+    margin: 15px 0px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 3px;
+    border: 2px solid rgba(182, 172, 172, 0.58);
+}
+.data:focus{
+    border:3px solid rgb(83, 159, 221);
+}
+.btn{
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px;
+    color: aliceblue;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(11, 129, 225);
+}
+#meme_heading{
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 20px 15px;
+    margin: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    width: 18%;
+}
+.memes{
+    display: inline-block;
+    margin: 0px 35px;
+}
+.memes img{
+    width: 270px;
+    height: 270px;
+}
+.txt{
+    display: none;
+    text-align: center;
+    position: relative;
+    bottom: 4px;
+    padding: 5px 0px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    color: white;
+    background-color: var(--main);
+
+}
+/* 2nd page */
+#page2{
+    display: flex;
+    height: 100hv;
+}
+#content{
+    height: 100vh;
+    width: 55vw;
+    font-family: var(--font);
+}
+.gallery{
+    color: white;
+    font-size: 25px;
+    padding: 45px 0px 5px 30px;
+    background-color: var(--main);
+}
+#gallery_imgs{
+    position: relative;
+}
+#gallery_imgs div img{
+    width: 55vw;
+    height: 89vh;
+}
+.arrow > img{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+}
+.arrow{
+    opacity: 0.8;
+    position: absolute;
+    left: 5px;
+    top: 50vh;
+    padding: 0px 5px;
+    font-size: 40px;
+    color: rgb(154, 152, 152);
+    cursor: pointer;
+    background-color: black;
+}
+#right{
+    left : 780px;
+}
+#explore{
+    box-sizing: border-box;
+    width: 22vw;
+    height: 101vh;
+    padding: 20vh 40px;
+    background-color: rgb(225, 225, 225);
+}
+#heading_explore{
+    font-size: 35px;
+    font-style:oblique;
+    font-family: 'cursive';
+}
+#explore p:nth-child(2n+1){
+    color: rgba(11, 139, 139, 0.884);
+    padding: 20px 0px;
+}
+#explore p:nth-child(2){
+    padding: 20px 0px 0px;
+    border-top: 1px solid gray;
+    font-family: var(--font);
+}
+#contact{
+    margin-left: 10px;
+    font-family: var(--font);
+}
+#contactUs{
+    width: 20vw;
+    box-sizing: border-box;
+}
+#contactUs li{
+    border: 1px solid rgb(225, 225, 225);
+    padding: 17px;
+    position: relative;
+}
+
+#contactUs li label{
+    position: relative;
+    left: 3px;
+    top: 5px;
+    background-color: rgb(225, 225, 225);
+    padding: 5px;
+}
+#contactUs li input:not(#sub){
+    position: absolute;
+    left: 20px;
+    padding: 5px 30px;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid var(--gray);
+    background-color: transparent;
+}
+#sub{
+    cursor: pointer;
+    display: inline;
+    font-size: 18px;
+    padding: 5px 20px;
+    color: aliceblue;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(11, 129, 225);
+}
+#contact div li{
+    border: 1px solid rgb(225, 225, 225);
+    padding: 14px;
+}
+label img,li img{
+    width: 15px;
+    height: 15px;
+}
+li p{
+    font-style: italic;
+    font-family: 'cursive';
+}
+/* Applied all */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+

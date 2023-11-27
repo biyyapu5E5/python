@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterCard</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            /* background-color: green; */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* background-color: black; */
+        }
+        .card{
+            cursor: pointer;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 10px black;
+            height: 255px;
+            width: 450px;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 25px 15px 0px;
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.7s ease;
+            background-color: rgb(74, 74, 233);
+        }
+        #container{
+            position: relative;
+        }
+        .card:hover{
+            transform: rotateY(180deg);
+        }
+        .front-card{
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .back-card{
+            padding: 0px;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+        }
+        .card li{
+            list-style-type: none;
+        }
+        #logo{
+            /* border: 1px solid green; */
+            display: inline;
+            position: relative;
+            margin: 5px 70px 0px 0px;
+        }
+        #red{
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: red;
+        }
+        #yellow{
+            position: absolute;
+            left: 20px;
+            width: 35px;
+            height: 36px;
+            border-radius: 50%;
+            opacity: 0.8;
+            background-color: rgb(242, 150, 11);
+        }
+        #top{
+            display: flex;
+            /* border: 1px solid green; */
+        }
+        #top p:last-child{
+            margin-left: 150px;
+            margin-top: 0;
+        }
+        li:nth-child(2) p:first-child{
+            font-size: 15px;
+            margin: 0;
+        }
+        li:nth-child(2) p:last-child{
+            margin: 0;
+            font-size: 25px;
+        }li:last-child{
+            display: flex;
+            justify-content: space-between;
+        }
+        .valid{
+            font-size: 12px;
+            margin: 0;
+        }
+        .date{
+            font-size: 20px;
+            margin: 0;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        .font{
+            font-size: 10px;
+            padding: 5px 20px 5px 20px;
+        }
+        #black{
+            height: 50px;
+            padding: 0;
+            background-color: black;
+        }
+        #pattern{
+            margin: 20px 10px 0px;
+            width: 80%;
+            padding: 15px 0px;
+            border-radius: 10px;
+            background:repeating-linear-gradient(
+                #fff,
+                #fff 3px,
+                #efefef 0px,
+                #efefef 9px
+            );
+            text-align: right;
+        }
+        #pattern span{
+            color: black;
+            padding: 5px;
+            margin-right: -37px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'container'>
+        <section class = 'card'>
+            <ul class = 'front-card'>
+                <li id = 'top'>
+                    <p id = 'logo'><span id = 'red'></span><span id = 'yellow'></span></p>
+                    <p>Master Card</p>
+                    <p>
+                        <img src="Chip.jpg" alt="">
+                    </p>
+            </li>
+            <li>
+                <p>Card Number</p>
+                <p>8050 5040 2030 3020</p>
+            </li>
+            <li>
+                <p>Padmini Biyyapu</p>
+                <div>
+                    <p class = 'valid'>Valid Thru</p>
+                    <p class = 'date'>05/20</p>
+                </div>
+            </li>
+        </ul>
+        <div class = 'back-card'>
+            <p class = 'font'>For customer service call +91 77 4343 3433 or email at mastercard@gmail.com</p>
+            <div id = 'black'></div>
+            <div>
+                <p id = 'pattern'><span>005</span></p>
+            </div>
+            <p class = 'font'>
+                simply dummy text of the printing and typesetting industry lorem tpsum has
+                been the industry's standard dummy text over since the 15's. When an unknown printer tooka gallery of type and crambled it to make a type specimen book.
+            </p>
+        </div>
+    </section>
+</div>
+</body>
+</html>

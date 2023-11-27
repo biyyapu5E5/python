@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header id='head'>
+        <p class='display'>Hi, I am</p>
+        <p contenteditable="true" class='editableContent'>Padmini Biyyapu</p>
+        <p contenteditable="true" class='editableContent'>Web Developer!</p>
+    </header>
+    <div id='container'>
+        <section id='hero'>
+            <h3>My intro</h3>
+            <div id='about'>About Me</div>
+            <p contenteditable="true" class='editableContent'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quo quis quidem corporis amet culpa! 
+                Quaerat itaque dolore modi, commodi inventore nisi dicta ipsum sit excepturi, maiores, culpa reicien
+                dis dolor! Veniam alias amet odio ab sapiente earum magni quas in molestiae ullam excepturi 
+                eaque, tenetur minima ratione architecto officiis quo dignissimos porro eum sit quaerat natus nemo?
+                Animi impedit expedita, tempore at aperiam est iusto debitis molestiae voluptatibus nobis obcaecati
+                ea totam error vero illum asperiores dolore incidunt officiis, aut assumenda. Aut, suscipit id non mollitia
+                velit facilis repellat fugiat, tempora delectus molestias eligendi libero modi nam. Similique, aliquid fugiat.
+            </p>
+        </section>
+        <section id='skill'>
+            <article>
+                <h3>Skills</h3>
+                <div class='btn' id='showForm'>Add Skill +</div>
+                <ul id="skillList"></ul>
+            </article>
+            <article>
+                <h3>Rate Your Skills</h3>
+                <ul id="skillListRate"></ul>
+            </article>
+        </section>
+        <section id='project'>
+            <h3>Optional Projects</h3>
+            <div class='btn' id='showProject' onclick="op_project()">Add Project +</div>
+            <ul id = 'projectList'></ul>
+        </section>
+    </div>
+    <footer id='slinks'>
+        <h3>Social Links</h3>
+        <div class='btn' id='showLink' onclick="slinks()">Add Links +</div>
+        <ul id = 'socialList'></ul>
+    </footer>
+    <script src="page.js"></script>
+</body>
+</html>

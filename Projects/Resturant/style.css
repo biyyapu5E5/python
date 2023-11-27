@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, sans-serif; background-color: cadetblue;
+    text-align: center;
+    height: 150vh;
+    justify-tracks:calc();
+}
+
+#bill{
+    padding: 10px;;
+}
+
+.container {
+    text-align: center;
+}
+input{
+    width: 10%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button{
+    background-color: #007BFF;
+    padding: 10px;
+    border: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+}

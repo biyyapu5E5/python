@@ -1,0 +1,49 @@
+<html>
+    <style>
+        body
+        {
+            background-color: rgb(234, 193, 118);
+        }
+        .Contact 
+        {
+            /* border: 2px solid red; */
+            margin: 300px;
+            margin-top: 30px;
+            padding-left: 250px;
+        }
+        input
+        {
+            display: block;
+            margin: 5px;
+            width: 400px;
+
+        }
+        textarea 
+        {
+            width: 400px;
+            margin: 4px;
+        }
+        input[type="submit"]
+        {
+            border: 2px solid black;
+            padding: 3px;
+        }
+        
+    </style>
+    <body>
+        <form class="Contact" method="post">
+            <input type="text" name="Name" id="" placeholder="Name" autocomplete="on" required>
+            <input type="text" name="Email" id="" placeholder="Email" autocomplete="on" minlength="8">
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="number" placeholder="Five Star Reating" min = '1' max = '5'>
+            <input type="submit" value="SUBMIT" onclick="fun()">
+
+        </form>
+        <script>
+            function fun()
+            {
+                alert("Thank u ..");
+            }
+        </script>
+    </body>
+</html>

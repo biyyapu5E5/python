@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <style>
+
+            body
+            {
+                margin: 0px;
+                
+            }
+            
+            nav a
+            {
+                color: azure;
+                display: inline-block;
+                padding: 12px;
+                
+            }
+            a 
+            {
+                text-decoration-line: none;
+            }
+            a:hover
+            {
+                background-color: whitesmoke;
+                color: black;
+            }
+            .List 
+            {
+                /* border: 2px solid black; */
+                border-bottom: 2px solid #000;
+                background-color: gray;
+                height: 41px;
+            }
+            .container 
+            {
+                /* height: 300px;
+                width: 300px; */
+                /* border: 2px solid blue; */
+                display: flex;
+                background-color: rgb(205, 110, 189);
+                /* flex container properties */
+
+
+                /* by default flex-direction: row;
+                flex-direction: column;
+                flex-direction: row-reverse;
+                flex-direction: column-reverse; */
+                flex-direction: row; 
+
+
+                /* by default flex-wrap: nowrap;*/
+                /* flex-wrap: wrap-reverse; */
+                flex-wrap: wrap;
+
+                /* shorthand for flex-direction & flex-wrap is flex-flow: flex-direction flex-wrap; */
+                /* flex-flow: column-reverse wrap; */
+
+                /* justify's content in horizontal direction */
+
+                /* justify-content: center;
+                justify-content: space-evenly;
+                justify-content: start;
+                justify-content: end;
+                justify-content: space-around; */
+                justify-content: space-between;
+
+                /* justifies content in vertical direction  */
+
+                align-items: flex-start;
+                align-items: flex-end;
+                align-items: stretch;
+                align-items: center;
+
+            }
+            img
+            {
+                margin-right: 25px;
+                margin-left: 25px;
+                height: 200px;
+                width: 200px;
+            }
+            .box
+            {
+                height: 20px;
+                width: 200px;
+                border: 1px solid black;
+                margin-right: 25px;
+                margin-left: 25px;
+                text-align: center;
+                /* padding: 10px; */
+                
+            }
+            .container2
+            {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+            }
+            /* #box3
+            {
+                align-self: center;
+            } */
+            .heading
+            {
+                border: 3px solid black;
+                text-align: center;
+                font-style: italic;
+                background-color: rgb(233, 215, 230);
+            }
+            .box:hover
+            {
+                background-color: yellow;
+                text-align: center;
+                font-weight: bold;
+                font-size: medium;
+                font-size: 25px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav class="navbar">
+
+            <ul class="List">
+                <a class = "demo" id = "demo1" href="#">About</a>
+                <a class = "demo" id = "demo2" href="#">Contact</a>
+                <a class = "demo" id = "demo3" href="#">Menu</a>
+                <a class = "demo" id = "demo4" href="#">Help</a>
+            </ul>
+
+        </nav>
+        <br>
+        <div class = "heading">Breakfast</div>
+        <br>
+        <div class="container">
+
+            <img src="https://www.shutterstock.com/image-photo/chole-bhature-spicy-chick-peas-260nw-1867969534.jpg" alt="" class="demo" id="demo1">
+            <img src="https://static.toiimg.com/thumb/msid-78767001,width-1280,resizemode-4/78767001.jpg" alt="" class="demo" id="demo2">
+            <img src="https://t4.ftcdn.net/jpg/04/65/28/87/360_F_465288715_F3uc0aZMhzSbNbftEzHSb6RfUVQfCHeU.jpg" alt="" class="demo" id="demo3">
+            <img src="https://www.krumpli.co.uk/wp-content/uploads/2023/05/Homemade-Indian-Chapati-02-735x735.jpg" alt="" class="demo" id="demo4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSp0C_1NrVtlur5ivEOe2OY_awZKstM-PMQ&usqp=CAU" alt="">
+            
+        </div>
+        <br>
+        <div class="container2">
+            <div class="box" >Puri</div>
+            <div class="box" >Dosa</div>
+            <div class="box" >Idli & Vada</div>
+            <div class="box" >Chapati</div>
+            <div class="box" >Egg Dosa</div>
+
+        </div>
+        <br>
+        <div class="heading">Lunch</div>
+        <br>
+        <div class="container">
+
+            <img src="https://www.shutterstock.com/image-photo/chole-bhature-spicy-chick-peas-260nw-1867969534.jpg" alt="" class="demo" id="demo1">
+            <img src="https://static.toiimg.com/thumb/msid-78767001,width-1280,resizemode-4/78767001.jpg" alt="" class="demo" id="demo2">
+            <img src="https://t4.ftcdn.net/jpg/04/65/28/87/360_F_465288715_F3uc0aZMhzSbNbftEzHSb6RfUVQfCHeU.jpg" alt="" class="demo" id="demo3">
+            <img src="https://www.krumpli.co.uk/wp-content/uploads/2023/05/Homemade-Indian-Chapati-02-735x735.jpg" alt="" class="demo" id="demo4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSp0C_1NrVtlur5ivEOe2OY_awZKstM-PMQ&usqp=CAU" alt="">
+            
+        </div>
+        <br>
+        <div class="container2">
+            <div class="box" >Puri</div>
+            <div class="box" >Dosa</div>
+            <div class="box" >Idli & Vada</div>
+            <div class="box" >Chapati</div>
+            <div class="box" >Egg Dosa</div>
+
+        </div>
+        
+    </body>
+</html>
+<!-- 
+    #box1
+    {
+    /* Flex properties for a flex item should be applied independently */
+    /* Higher the order, later it shows up in the container */
+    /* order: 2; */
+
+    /* flex-grow: 2;
+    flex-shrink: 2; */
+    }
+
+    #box2
+    {
+    /* flex-grow: 3;
+    flex-shrink: 3 ; */
+    flex-basis: 160px;
+    /* when flex-direction is set to row flex-basis: will control width */
+    /* when flex-direction is set to column flex-basis: will control height */
+    }
+
+    #box3
+    {
+    /* flex: 2 2 230px;             flex: flex-grow flex-shrink flex-basis */
+    align-self: flex-start;
+    align-self: flex-end;
+    align-self: center;
+
+    } -->

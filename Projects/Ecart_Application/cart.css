@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Gill Sans", sans-serif;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(63, 62, 62);
+    height: 100px;
+    font-size: 26px;
+    border-bottom: 1px solid rgb(116, 113, 113);
+}
+#heading img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+#heading p{
+    font-family:Gabriola, Times, serif;;
+    margin-left: 20px;
+    font-size: 50px;
+    color: aliceblue;
+}
+#grid{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(233, 232, 232);
+}
+#products{
+    width: 70%;
+}
+#cart{
+    margin-left: 20px;
+    width: 28%;
+}
+#small_heading{
+    font-size: 35px;
+    margin: 10px;
+    font-family: system-ui;
+}
+#small{
+    margin-left: 12px;
+}
+#fruits{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 20px 20px 40px 70px;
+}
+#fruits > div{
+    height: 300px;
+    width: 300px;
+    margin: 15px 1px;
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 1px 1px 10px 3px rgb(111, 148, 151); */
+}
+#cart div img{
+    display: none;
+    margin: 0px;
+    padding: 0px;
+}
+#total_price{
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+#amount{
+    font-size: 35px;
+    color: green;
+}
+#currency{
+    display: inline;
+    font-size: 14px;
+    color: blue;
+}
+img{
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 15px auto;
+}
+span{
+    color: rgb(222, 4, 4);
+    font-variant-numeric: tabular-nums;
+}
+/* button{
+    display: block;
+    font-size: 20px;
+    margin: 30px auto;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: aliceblue;
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+} */
+/* button{
+    background-color: black;
+    color: white;
+} */
+.design{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: aliceblue;
+    height: 50px;
+    margin-top: 45px;
+    background-color: rgba(6, 111, 111, 0.884);
+}

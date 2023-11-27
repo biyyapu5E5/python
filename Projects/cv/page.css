@@ -1,0 +1,82 @@
+body{
+    margin: 20px;
+    padding: 0px;
+    /* box-shadow: 4px 4px 20px 2px black; */
+}
+[contenteditable] {
+    font-size: 30px;
+    outline: 0px solid transparent;
+}
+:root{
+    --main: rgb(11, 129, 225);
+}
+p{
+    margin: 10px;
+}
+h3{
+    padding-left: 20px;
+    font-size: 30px;
+    color: gray;
+}
+#head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    row-gap: 0px;
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#hero p{
+    margin: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.display{
+    margin: 0px;
+    font-size: 40px;
+    color: var(--main);
+}
+#about{
+    margin: 10px 10px 10px 20px;
+    font-size: 20px;
+    color: var(--main);
+}
+.btn{
+    all:unset;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    margin: 0px 0px 10px 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: var(--main);
+}
+#container{
+    margin: 10px 0px;
+    background-color: lightgray;
+}
+#hero > h3{
+    margin: 0px;
+}
+
+#projectList{
+    margin-bottom: 0px;
+}
+#slinks{
+    margin: 10px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(96, 184, 184, 0.884);
+}
+#slinks h3{
+    color: white;
+    padding-top: 10px;
+    margin-top: 0px;
+}

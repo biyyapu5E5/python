@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div id = 'heading'>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-xYv3gdMwDqzTOlRaCiZnVu8GiDDv3OIe2pJbJoyGHVvQfzm4Q_MQvPytlnpiH-EwGg&usqp=CAU" alt="">
+        </div>
+        <p> Welcome To Furit Cart</p>
+    </div>
+    <div id = 'grid'>
+        <section id = 'products'>
+            <p id = 'small_heading'>Available Products</p>
+            <div id = 'fruits'>
+                <div>
+                    <img src="Orange.jpg" alt="" srcset="">
+                    <div>Orange | <span>$20</span></div>
+                    <div 
+                    class = 'design'
+                    id = 'Orange'
+                    onclick = 'addtoCart(this.id,20,1)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Apple.jpg" alt="">
+                    <div>Apple | <span>$25</span></div>
+                    <div
+                    class="design"
+                    id = 'Apple'
+                    onclick = 'addtoCart(this.id,25,2)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Banana.jpg" alt="">
+                    <div>Banana | <span>$10</span></div>
+                    <div
+                    class="design"
+                    id = 'Banana'
+                    onclick = 'addtoCart(this.id,10,3)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Black_grapes.jpg" alt="">
+                    <div>Black Grapes | <span>$60</span></div>
+                    <div
+                    class="design"
+                    id = 'Black-grapes'
+                    onclick = 'addtoCart(this.id,60,4)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Green_grapes.jpg" alt="">
+                    <div>Green Grapes | <span>$20</span></div>
+                    <div 
+                    class = 'design'
+                    id = 'Green-grapes'
+                    onclick = 'addtoCart(this.id,20,5)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="PineApple.jpg" alt="">
+                    <div>Pineapple | <span>$30</span></div>
+                    <div 
+                    class = 'design'
+                    id = 'Pineapple'
+                    onclick = 'addtoCart(this.id,30,6)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Guava.jpg" alt="">
+                    <div>Guava | <span>$5</span></div>
+                    <div 
+                    class = 'design'
+                    id = 'Guava'
+                    onclick = 'addtoCart(this.id,5,7)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Kiwi.jpg" alt="">
+                    <div>Kiwi | <span>$70</span></div>
+                    <div 
+                    class = 'design'
+                    id = 'Kiwi'
+                    onclick = 'addtoCart(this.id,70,8)'
+                    >Add To Cart</div>
+                </div>
+                <div>
+                    <img src="Strawberry.jpg" alt="">
+                    <div>Strawberry | <span>$5</span></div>
+                    <div 
+                    class = 'design'
+                    id = 'Strawberry'
+                    onclick = 'addtoCart(this.id,5,9)'
+                    >Add To Cart</div>
+                </div>
+            </div>
+        </section>
+        <section id = 'cart'>
+            <p id = 'small_heading'>Your Cart</p>
+            <p id = 'small'>Nothing addedd here...</p>
+            <br>
+            <div class = 'container1'>
+                <img class = '1'src ="Orange.jpg" alt="" srcset="">
+                <pre id="1"></pre>
+                <img class = 'cart_image1' src="Green_cart.jpg" alt="">
+                <img class = 'bin1' onclick = "dustbin('Orange',this.className,20)" src="dustbin.png">
+            </div>
+            <div class = 'container2'> 
+                <img class = '2'src="Apple.jpg" alt="">
+                <pre id="2"></pre>
+                <img class = 'cart_image2' src="Green_cart.jpg" alt="">
+                <img class = 'bin2' onclick =  "dustbin('Apple',this.className,25)" src="dustbin.png">
+            </div>
+            <div class = 'container3'>
+                <img src="Banana.jpg" alt="" class="3">
+                <pre id="3"></pre>
+                <img class = 'cart_image3' src="Green_cart.jpg" alt="">
+                <img class = 'bin3' onclick = "dustbin('Banana',this.className,10)" src="dustbin.png">
+            </div>
+            <div class = 'container4'>
+                <img src="Black_grapes.jpg" alt="" class="4">
+                <pre id="4"></pre>
+                <img class = 'cart_image4' src="Green_cart.jpg" alt="">
+                <img class = 'bin4' onclick = "dustbin('Black-grapes',this.className,60)" src="dustbin.png">
+            </div>
+            <div class = 'container5'>
+                <img src="Green_grapes.jpg" alt="" class="5">
+                <pre id="5"></pre>
+                <img class = 'cart_image5' src="Green_cart.jpg" alt="">
+                <img class = 'bin5' onclick = "dustbin('Green-grapes',this.className,20)" src="dustbin.png">
+            </div>
+            <div class = 'container6'>
+                <img src="PineApple.jpg" alt="" class="6">
+                <pre id="6"></pre>
+                <img class = 'cart_image6' src="Green_cart.jpg" alt="">
+                <img class = 'bin6' onclick = "dustbin('Pineapple',this.className,30)" src="dustbin.png">
+            </div>
+            <div class = 'container7'>
+                <img src="Guava.jpg" alt="" class="7">
+                <pre id="7"></pre>
+                <img class = 'cart_image7' src="Green_cart.jpg" alt="">
+                <img class = 'bin7' onclick = "dustbin('Guava',this.className,5)" src="dustbin.png">
+            </div>
+            <div class = 'container8'>
+                <img src="Kiwi.jpg" alt="" class="8">
+                <pre id="8"></pre>
+                <img class = 'cart_image8' src="Green_cart.jpg" alt="">
+                <img class = 'bin8' onclick = "dustbin('Kiwi',this.className,70)" src="dustbin.png">
+            </div>
+            <div class = 'container9'>
+                <img src="Strawberry.jpg" alt="" class="9">
+                <pre id="9"></pre>
+                <img class = 'cart_image9' src="Green_cart.jpg" alt="">
+                <img class = 'bin9' onclick = "dustbin('Strawberry',this.className,5)" src="dustbin.png">
+            </div>
+            <div id = 'total_price'>Total Price : <span id = 'amount'>$0</span><pre id = 'currency'> USD</pre></div>
+        </section>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>New Game</h1>
+    <form action="#" class = 'details' id = 'newform'>
+        <input type="text" id = 'title' placeholder="title" required>
+        <textarea id="description" cols="20" rows="3" placeholder="description" required></textarea>
+        <input type="text" id = 'type' placeholder="type" required>
+        <input type="text" id = 'age' placeholder="minimum age" required>
+        <input type="text" id = 'pricing_hr'placeholder="Pricing(Hourly)" required>
+        <input type="text" id = 'pricing' placeholder="Pring(Per Game)" required>
+        <input type="text" id = 'path' placeholder="image path" required>
+        <input type="text" id = 'alt' placeholder="image alt text" required>
+        <button class = 'search'>Save</button>
+    </form>
+    <p class = 'Cancel'>Cancel</p>
+    <script>
+        document.getElementById('newform').addEventListener('submit',(e)=>{
+            e.preventDefault();
+            var title = document.getElementById("title").value;
+            var des = document.getElementById("description").value;
+            var type = document.getElementById("type").value;
+            var age = document.getElementById("age").value;
+            var pricing_hr = document.getElementById("pricing_hr").value;
+            var pricing = document.getElementById("pricing").value;
+            var path = document.getElementById("path").value;
+            var alt = document.getElementById("alt").value;
+
+            var store = JSON.parse(localStorage.getItem('store')) || [];
+            // store.push({title:title});
+            let titleExists = false;
+
+            // Check if the title already exists in the store
+            for (let i = 0; i < store.length; i++) {
+                let s = store[i].title.toLowerCase();
+                if (s === title.toLowerCase()) {
+                    titleExists = true;
+                    break;
+                }
+            }
+
+            if (titleExists) {
+                alert("This Game already Exist..!!");
+            } else {
+                // Add a new game to the store array
+                store.push({title: title, des: des, type: type, age: age, pricing_hr: pricing_hr, pricing: pricing, path: path, alt: alt});
+                localStorage.setItem('store', JSON.stringify(store));
+                window.location.href = 'Main.html';
+            }
+
+        })
+        let cancel = document.getElementsByClassName('Cancel');
+        cancel[0].addEventListener('click',()=>{
+            let con = confirm('Do Want to Cancel the Game...???');
+            if(con){
+                window.location.href = 'Main.html';
+            }
+        })
+    </script>
+</body>
+</html>

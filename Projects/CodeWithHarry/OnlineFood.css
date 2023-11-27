@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body 
+{
+    background-color: red;
+} */
+.center 
+{
+    text-align: center;
+}
+.h-primary
+{
+    font-size: 50px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary
+{
+    padding: 10px 0px;
+    font-size: 35px;
+    font-family: 'Bree Serif', serif;
+
+}
+.h-third 
+{
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Navigation Bar */
+#navbar 
+{
+    display: flex;
+    padding: 10px 3px;
+    position: sticky;
+    top:0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+/* .logo 
+{
+    display: inline-block;
+} */
+#navbar ul 
+{
+    display: flex;
+    align-items: center;
+}
+#navbar ul li
+{
+    list-style: none; 
+    display: inline; 
+    font-size: 18px;
+}
+#navbar ul li a 
+{
+    text-decoration: none;
+    color: aliceblue; 
+    padding: 2px 22px; 
+    font-family: 'Bree Serif', serif;
+}
+#navbar img
+{
+    width: 40px;
+    height: 40px;
+    padding-right: 8px;
+    background-position: center;
+}
+
+/* Navigation Hover */
+
+#navbar li:hover
+{
+    background-color: red;
+    color: black;
+    padding: 8px 0px;
+    border-radius: 2rem;
+}
+
+/* Home   */
+
+#home 
+{
+    color: aliceblue;
+    text-align: center;
+    height: 400px;
+    width: 100%;
+    padding-top: 120px;
+    margin-bottom: 20px;
+}
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('https://img.freepik.com/premium-photo/blue-food-background-vegetables-spices-blue-background-top-view-free-space-your-text_187166-21406.jpg?w=2000') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+#home p 
+{
+    font-size: 20px;
+    margin: 10px;
+}
+#home .btn
+{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+/* Services */
+#services-container
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.box 
+{
+    margin-top: 20px;
+    border: 2px solid rgb(235, 34, 34);
+    background-color: rgb(235, 233, 233);
+    border-radius: 3rem;
+    width: 300px;
+    height: 400px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+.box img 
+{
+    width: 140px;
+    height: 140px;
+}
+.box p 
+{
+    font-family: 'Bree Serif', serif;
+    font-size: 13px;
+    padding: 15px 5px;
+}
+
+/* Clients */
+#clients
+{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url('https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center/cover;
+    height: 400px;
+}
+.clients-container 
+{
+    margin-top: 20px;
+}
+.clients-container img 
+{
+    height: 100px;
+    width: 120px;
+    margin: 40px;
+}
+
+/* Contact */
+
+#contact 
+{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.66;
+    background: url('https://media.istockphoto.com/id/1416335096/photo/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address.webp?b=1&s=170667a&w=0&k=20&c=O39_wq7HB2oZHV3pyeZDxFAq0Xb_zNvLKrAIEWDVveY=') no-repeat center center/cover;
+}
+#contact-container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-container form
+{
+    width: 30%;
+}
+#contact-container label
+{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+ }
+#contact-container input, #contact-container textarea
+{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+/* Footer */
+
+footer 
+{
+    background-color: rgb(12, 14, 14);
+    color: aliceblue;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Media Query */
+
+@media only screen and (min-width:200px) and (max-width:500px) and (orientation: portrait)
+{
+    #navbar 
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+    }
+    #navbar ul li a
+    {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 10px;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+    #services-container 
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .box 
+    {
+        height: 300px;
+        width: 180px;
+    }
+    .box p
+    {
+        font-size: 10px;
+    }
+    .box img 
+    {
+        width: 80px;
+        height: 80px;
+    }
+    .clients-container 
+    {
+        margin-top: 30px;
+    }
+    .clients-container img
+    {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: 50px;
+        height: 50px;
+        margin: 20px;
+    }
+    #contact-container form
+    {
+        width: 50%;
+        font-size: 10px;
+    }
+    .h-primary 
+    {
+        font-size: 15px;
+    }
+    #home p 
+    {
+        font-size: 13px;
+    }
+}
+@media screen and (min-width:501px) and (max-width: 1036px) and (orientation: portrait)
+{
+    #navbar 
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+    }
+    #navbar ul li a
+    {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 10px;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+    #services-container 
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .box 
+    {
+        height: 300px;
+        width: 400px;
+    }
+    .box p
+    {
+        font-size: 14px;
+    }
+    .box img 
+    {
+        width: 80px;
+        height: 80px;
+    }
+    .clients-container 
+    {
+        margin-top: 30px;
+    }
+    .clients-container img
+    {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: 50px;
+        height: 50px;
+        margin: 20px;
+    }
+    #contact-container 
+    {
+        font-size: 50px;
+    }
+    .h-primary 
+    {
+        font-size: 25px;
+    }
+    #home p 
+    {
+        font-size: 13px;
+    }
+}

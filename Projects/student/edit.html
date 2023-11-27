@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditForm</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family :Arial, Helvetica, sans-serif;
+        }
+        .con{
+            width: 300px;
+        }
+        #heading{
+            font-size: 25px;
+            padding: 10px 5px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        input{
+            padding: 10px 5px;
+            width: 100%;
+        }
+        label{
+            margin: 5px;
+        }
+        .btn{
+            width: 30%;
+            cursor: pointer;
+            display: inline;
+            text-align: center;
+            color: white;
+            padding: 10px 5px;
+            margin: 5px;
+            margin-right: 200px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(11, 129, 225);
+        }
+    </style>
+
+</head>
+<body>
+    <div id='container'>
+        <h2>Edit Form</h2>
+        <form id='editForm'>
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" autocomplete="on" required><br><br>
+
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" autocomplete="on" required><br><br>
+
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" autocomplete="on" required><br><br>
+
+            <label for="PhoneNumber">Phone Number:</label>
+            <input type="text" id="PhoneNumber" name="PhoneNumber" pattern="[1-9][0-9]{8}" autocomplete="on" required><br><br>
+
+            <input type="submit" value="Save" class="btn">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            //console.log(urlParams);
+            var index = urlParams.get('id');
+            var fname = urlParams.get('fname');
+            var lname = urlParams.get('lname');
+            var email = urlParams.get('email');
+            var phno = urlParams.get('phno');
+
+            document.getElementById('FirstName').value = fname;
+            document.getElementById('LastName').value = lname;
+            document.getElementById('Email').value = email;
+            document.getElementById('PhoneNumber').value = phno;
+
+            document.getElementById('editForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var storedData = JSON.parse(localStorage.getItem('storedData')) || [];
+
+                if (index >= 0 && index < storedData.length) {
+                    storedData[index].fname = document.getElementById('FirstName').value;
+                    storedData[index].lname = document.getElementById('LastName').value;
+                    storedData[index].email = document.getElementById('Email').value;
+                    storedData[index].phno = document.getElementById('PhoneNumber').value;
+
+                    localStorage.setItem('storedData', JSON.stringify(storedData));
+
+                    // Redirect back to example.html
+                    window.location.href = 'example.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

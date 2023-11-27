@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Resturant</title>
+        <link rel="stylesheet" media ="screen and (max-width:1422px)" href="Mainpage.css">
+    </head>
+    <style>
+
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container
+        {
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            height: 100%;
+            width: 100%;
+            content: "";
+            opacity: 0.4;
+            z-index: -1;
+            position: relative;
+
+        }
+        .box
+        {
+            display: flex;
+            /* border: 2px solid red; */
+            width: 1000px;
+            height: 500px;
+            /* margin: 0px 0px 0px 500px; */
+            /* justify-content: center; */
+            background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&w=1000&q=80") no-repeat center center/cover;
+            background-position: center;
+            position: absolute;
+            /* opacity: 1; */
+            top:0px;
+            left: 10%;
+        }
+        .boxes 
+        {
+            border-top-color:  black;
+            border-left-color:  black;
+            border-right-color:  black;
+            border-bottom-color: blue;
+            
+            border-width: 2px;
+            border-bottom-width: 4px;
+            border-style: solid;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            height: 35px;
+            width: 350px;
+            align-self: flex-end;
+            text-align: center;
+            padding-top: 10px;
+        }
+        a 
+        {
+            text-decoration-line: none;
+            font-size: 20px;
+            color: black;
+            background-color: aliceblue;
+        }
+        a:hover
+        {
+            background-color: rgb(232, 161, 29);
+        }
+        
+    </style>
+    <body>
+            <div class="container"></div>
+            <div class="box">
+                <a href="Menu.html" class="boxes">Our Menu</a>
+                <a href="Contact.html" class="boxes">Contact</a>
+                <a href="About.html" class="boxes">About us</a>
+            </div>
+    </body>
+</html>

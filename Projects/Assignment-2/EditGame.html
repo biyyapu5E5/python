@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Edit Game</h1>
+    <form action="#" class = 'details' id = 'editingform'>
+        <input type="text" id = 'title' placeholder="title" required>
+        <textarea id="description" cols="20" rows="3" placeholder="description" required></textarea>
+        <input type="text" id = 'type' placeholder="type" required>
+        <input type="text" id = 'age' placeholder="minimum age" required>
+        <input type="text" id = 'pricing_hr'placeholder="Pricing(Hourly)" required>
+        <input type="text" id = 'pricing' placeholder="Pring(Per Game)" required>
+        <input type="text" id = 'path' placeholder="image path" required>
+        <input type="text" id = 'alt' placeholder="image alt text" required>
+        <button class = 'search' id = 'saveform'> save </button>
+    </form>
+    <p class = 'Cancel'>Cancel</p>
+    <script>
+        var store = JSON.parse(localStorage.getItem('store')) || [];
+        let urlParams = new URLSearchParams(window.location.search);
+        let t = urlParams.get('title');
+        for (let i = 0; i < store.length; i++) 
+        {
+            if (store[i].title === t) 
+            {
+            // console.log(data);
+            // console.log(data.des);
+            document.getElementById("title").value = store[i].title;
+            document.getElementById("description").value = store[i].des;
+                document.getElementById("type").value = store[i].type;
+                document.getElementById("age").value = store[i].age;
+                document.getElementById("pricing_hr").value = store[i].pricing_hr;
+                document.getElementById("pricing").value = store[i].pricing;
+                document.getElementById("path").value = store[i].path;
+                document.getElementById("alt").value = store[i].alt;
+                document.getElementById('editingform').addEventListener('submit',(e)=>{
+                    e.preventDefault();
+                    let s = document.getElementById('title').value;
+                    let titleExists = false;
+                    store.forEach(data => {
+                        // console.log(data.title);
+                        if(s === data.title.toLowerCase()){
+                            titleExists = true;
+                        }
+                    });
+                    if(titleExists){
+                        alert("This Game already Exist...!!");
+                    }
+                    else{
+                        store[i].title = s;
+                        store[i].des = document.getElementById('description').value;
+                        store[i].type = document.getElementById('type').value;
+                        store[i].age = document.getElementById('age').value;
+                        store[i].pricing_hr = document.getElementById('pricing_hr').value;
+                        store[i].pricing = document.getElementById('pricing').value;
+                        store[i].path = document.getElementById('path').value;
+                        store[i].alt = document.getElementById('alt').value;
+                        localStorage.setItem('store', JSON.stringify(store));
+                        window.location.href = `DisplayGame.html?title=${store[i].title}`;
+                    }
+                })
+            }
+        }
+        let cancel = document.getElementsByClassName('Cancel');
+        cancel[0].addEventListener('click',()=>{
+            let con = confirm('Do You want to Cancel the Editing: ');
+            if(con){
+                window.location.href = 'Main.html';
+            }
+        })
+    </script>
+</body>
+</html>
