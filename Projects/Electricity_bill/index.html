@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ElectricityBill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = "container">
+        <form action="#" onsubmit="return generate_bill()">
+            <h1 id = "heading">Electricity Bill</h1>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" autocomplete="on" required>
+            </div>
+            <div>
+                <section class = 'unit'>
+                    <label for="service_no">Service no:</label>
+                    <label for="bill_date">Bill Date:</label>
+                </section>
+                <section class ='unit inputUnit' >
+                    <input type="text" name="service_no"  autocomplete="on" required>
+                    <input type="date" name="bill_date"   autocomplete="on" required>
+                </section>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" name="address"  autocomplete="on" required>
+
+            </div>
+            <div>
+                <label for="door_no">Door no:</label>
+                <input type="text" name="door_no" autocomplete="on" required>
+            </div>
+            <div>
+                <label for="landmark">Landmark:</label>
+                <input type="text" name="landmark" autocomplete="on" required>
+            </div>
+            <div class = 'unitRead'>
+                <section class ='unit'>
+                    <label for="previous_unit">Previous Unit Reading:</label>
+                    <label for="present_unit">Present Unit Reading:</label>
+                </section>
+                <section class = 'unit inputUnit'>
+                    <input type="number" name="previous_unit" id = 'previous_unit' autocomplete="on" min = 0 max = 100000 required>
+                    <input type="number" name="present_unit" id = 'present_unit' autocomplete="on" min = 0 max = 100000 required>
+                </section>
+            </div>
+            <div id = 'generate'>
+                <button>Generate Bill</button>
+            </div>
+            <p id = 'bill' style="display: none;"></p>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
