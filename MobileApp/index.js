@@ -16,8 +16,12 @@ const items = document.getElementById('items');
 btn.addEventListener('click',function(){
     let inputValue = txt.value
 
-    push(shareListInDB,inputValue)
-
+    if(inputValue==''){
+        alert("Write something...");
+    }
+    else{
+        push(shareListInDB,inputValue)
+    }
     txt.value = ''
     // appendItemToShareList(inputValue)
 })
